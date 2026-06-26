@@ -1335,6 +1335,32 @@ select:focus {
   }
 }
 @media (max-width: 560px) {
+  /* Keep the whole header on one row. The action buttons (Staff + Get the
+     app) never shrink or clip; if space is truly tight, the logo wordmark
+     ellipsizes first. */
+  .nav-inner {
+    gap: 12px;
+  }
+  .nav-logo,
+  .nav-logo .logo {
+    min-width: 0;
+  }
+  .logo-word {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .nav-actions {
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .nav-staff {
+    padding: 7px 11px;
+    font-size: 0.8rem;
+  }
+  .nav-actions .btn-sm {
+    padding: 0 13px;
+  }
   .trust-strip {
     gap: 20px;
   }
